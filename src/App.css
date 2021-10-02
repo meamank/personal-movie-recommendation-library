@@ -1,12 +1,16 @@
-
+:root {
+  --main: #060930;
+  --white: #fff;
+  --cyan: #cff4fc;
+}
 .btn-custom {
   background-color: #f4abc4 !important;
 }
 @font-face {
-  font-family: 'Kenyan Coffee';
+  font-family: "Kenyan Coffee";
   font-style: normal;
   font-weight: 400;
-  src: local('Kenyan Coffee'), url(./assests/Kenyan\ Coffee.woff) format('woff');
+  src: local("Kenyan Coffee"), url(./assests/Kenyan\ Coffee.woff) format("woff");
 }
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
@@ -25,15 +29,27 @@ body {
 .filter-container {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  background-color: #cff4fc;
+  /* justify-content: center; */
+  /* background-color: #cff4fc; */
   height: 50px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
-
+.filter-bar {
+  border-top: 3px solid #0609307d;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 15px;
+}
 @media only screen and (max-width: 768px) {
   .filter-container {
     flex-flow: row wrap;
     height: unset;
+    margin-left: 25px;
+  }
+  .filter-bar {
+    border-top: 2px solid #0609307d;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 15px;
   }
 }

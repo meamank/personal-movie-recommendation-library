@@ -31,21 +31,13 @@ function App() {
         Promise.all(response2).then((fetchedMovie) => {
           setMovieData(fetchedMovie.map((item) => item));
           const uniqueFilteredYears = [
-            ...new Set(fetchedMovie.map((item) => item.Year)),
+            ...new Set(fetchedMovie.map((item) => item.Year.slice(0,4))),
           ];
           setFilteredYear(uniqueFilteredYears.sort((a,b)=> b-a));
           const uniqueFilteredRating = [
             ...new Set(fetchedMovie.map((item) => item.imdbRating)),
           ];
           setFilteredRating(uniqueFilteredRating.sort((a,b)=> b-a));
-          // const uniqueFilteredGenre = [
-          //   ...new Set(fetchedMovie.map((item) =>{
-          //     const genreArr = item.Genre.split(",")
-          //     return genreArr;
-          //   })),
-          // ];
-          // setFilteredGenre(uniqueFilteredGenre);
-          // console.log(fetchedMovie);
           setIsLoading(false);
         });
       });
@@ -96,7 +88,9 @@ function App() {
           onChange={selectGenre}
           filterData={filteredGenre}
         />
+        
       </div>
+      <div className= 'filter-bar'></div>
       <div className="movie-main-container">
         {movieData &&
           movieData
