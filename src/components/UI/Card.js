@@ -38,7 +38,7 @@ const Card = (props) => {
                   </li>
                 </ul>
               </div>
-              {props.RatingsArray && props.RatingsArray.map((item) => {
+              {props.RatingsArray && props.RatingsArray.forEach((item) => {
                 if(item.Source && item.Source.includes('Rotten Tomatoes'))
                 return (
                   <div className={classes["rt-rating"]}>
