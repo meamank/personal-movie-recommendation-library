@@ -4,7 +4,6 @@ import Filter from "./components/filters/Filter";
 import Header from "./components/Header/header.js";
 import Card from "./components/UI/Card";
 import Loader from "./components/UI/Loader";
-// import "./bootstrap.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
