@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #060930;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+}
+
+nav img {
+  margin-left: 10px;
+  padding-right: 20px;
+}
+a {
+      padding-left: 10px;
+      align-items: center;
+      display: flex;
+      color: #ffff;
+      font-weight: 600;
+      text-decoration: unset;
+}
