@@ -68,6 +68,7 @@ const Card = (props) => {
                 <p className={classes["movie-actors"]}>{props.Actors}</p>
               </div>
             </div>
+            <button className= {classes.details__button}>More Details</button>
           </div>
         </div>
       </div>
