@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import classes from './DetailsCard.module.css'
 
 const detailsCard = () => {
@@ -113,7 +114,7 @@ const detailsCard = () => {
                   of the blue by the wizard Gandalf the Grey, Bilbo finds himself
                   joining a company of thirteen dwarves led by the legendary
                   warrior, Thorin Oakenshield. Their journey will take them into the
-                  Wild; through... <a href="#">read more</a>
+                  Wild; through... 
                 </p>
     
                 <div className={classes.avatars}>
