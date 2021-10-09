@@ -140,7 +140,7 @@ h3 {
 }
 .overview {
   font-family: "Open Sans", sans-serif;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .rating {
   display: flex;
@@ -182,7 +182,6 @@ h3 {
   border-right: 1px solid grey;
   padding-right: 5px;
   font-weight: 600;
-
 }
 .imdb-value {
   font-size: 14px;
@@ -190,8 +189,114 @@ h3 {
   font-weight: 600;
   /* border-left: 1px solid grey; */
 }
-.streamLogo{
+.streamLogo {
   width: 36px;
   height: 36px;
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 100vh;
+    margin-top: 0;
+  }
+  .content{
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .inner-content{
+    flex-wrap: wrap;
+  }
+  .poster {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(((100vw / 2.222222) - 40px) / 1.5);
+    min-width: calc(((100vw / 2.222222) - 40px) / 1.5);
+    height: calc((100vw / 2.222222) - 40px);
+    min-height: calc((100vw / 2.222222) - 40px);
+    border-radius: 4px;
+    z-index: 4;
+  }
+  .bgImg {
+    min-width: 100vw;
+    width: 100vw;
+    height: calc(100vw / 2.222222);
+    background-position: calc((((100vw / 2.222222) - 20px) / 1.5) / 2) 0;
+  }
+  .layer {
+    background-image: linear-gradient(
+      to right,
+      rgba(2.35%, 4.71%, 6.67%, 1) 20%,
+      rgba(2.35%, 4.71%, 6.67%, 0) 50%
+    );
+  }
+  .posterDiv{
+    width: 140px;
+    min-width: 140px;
+    height: 151px;
+    top: 10px;
+  }
+  .details{
+    min-height: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    top: 40px;
+  }
+  .detailsSection{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    float: none;
+    box-sizing: border-box;
+    padding-left: 0;
+    align-items: flex-start;
+  }
+  .title-rated-genre{
+    margin-bottom: 0;
+  }
+  .title-rated-genre h2 {
+    font-size: calc(0.7em + 3vw);
+    text-align: center;
+  }
+  .genre_rated{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 0;
+  }
+  .genre{
+    order: 4;
+  }
+  .rating{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 0;
+  }
+  .imdb-rating{
+    margin-top: 0;
+  }
+  .description{
+    padding: 20px;
+    background: var(--main);
+  }
 }
