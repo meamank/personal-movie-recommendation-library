@@ -1,8 +1,11 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 import classes from "./Card.module.css";
 import icon from "../../assests/tomato.svg";
 
 const Card = (props) => {
+ 
+  
   return (
     <Fragment>
       <div className={classes.card}>
@@ -20,9 +23,15 @@ const Card = (props) => {
                 <h2>{props.Title}</h2>
                 <div>
                   <p className={classes.details}>
-                    <span className={classes.details__rated}>{props.Rated}</span>
-                    <span className={classes.details__release}>{props.Released}</span>
-                    <span className={classes.details__genre}>{props.Genre}</span>
+                    <span className={classes.details__rated}>
+                      {props.Rated}
+                    </span>
+                    <span className={classes.details__release}>
+                      {props.Released}
+                    </span>
+                    <span className={classes.details__genre}>
+                      {props.Genre}
+                    </span>
                   </p>
                 </div>
               </div>
@@ -68,7 +77,9 @@ const Card = (props) => {
                 <p className={classes["movie-actors"]}>{props.Actors}</p>
               </div>
             </div>
-            <button className= {classes.details__button}>More Details</button>
+            <Link className={classes.details__button} to={`/home/${props.id}`}>
+              More Details
+            </Link>
           </div>
         </div>
       </div>

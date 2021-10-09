@@ -98,12 +98,14 @@
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #818181;
-  white-space: nowrap; 
-  width: auto; 
+  white-space: nowrap;
+  width: auto;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.details__rated, .details__release, .details__genre {
+.details__rated,
+.details__release,
+.details__genre {
   margin-right: 6px;
   font-weight: 600;
 }
@@ -198,14 +200,18 @@
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
+  white-space: nowrap;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.details__button{
+.details__button {
   border: 1px solid var(--main);
   padding: 2px;
   border-radius: 3px;
   font-size: 12px;
   color: var(--main);
-  float:right;
+  float: right;
 }
 
 @media only screen and (max-width: 768px) {
@@ -288,12 +294,14 @@
     font-family: "Open Sans", sans-serif;
     font-size: 8px;
     color: #818181;
-    white-space: nowrap; 
-    width: auto; 
+    white-space: nowrap;
+    width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .details__rated, .details__release, .details__genre {
+  .details__rated,
+  .details__release,
+  .details__genre {
     margin-right: 6px;
     font-weight: 600;
   }
@@ -384,12 +392,12 @@
     font-family: "Open Sans", sans-serif;
     font-size: 8px;
     font-weight: 600;
-    white-space: nowrap; 
-    width: auto; 
+    white-space: nowrap;
+    width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .details__button{
+  .details__button {
     padding: 1px;
     font-size: 7px;
     float: right;

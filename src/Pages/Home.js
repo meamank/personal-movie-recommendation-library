@@ -103,6 +103,7 @@ const Home = () => {
                 return (
                   <Card
                     key={d.imdbID}
+                    id= {d.imdbID}
                     Poster={d.Poster}
                     Title={d.Title}
                     Rated={d.Rated}
@@ -111,6 +112,7 @@ const Home = () => {
                     Rating={d.imdbRating}
                     Actors={d.Actors}
                     RatingsArray={d.Ratings}
+                    movieData={movieData}
                   />
                 );
               })}
