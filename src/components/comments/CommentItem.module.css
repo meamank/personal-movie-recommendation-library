@@ -1,0 +1,13 @@
+.item {
+  margin: 1rem 0;
+  color: #4a5555;
+  font-size: 18px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid teal;
+  font-weight: 500;
+}
+.name{
+  color: var(--cyan);
+    font-size: 15px;
+    font-weight: 500;
+}

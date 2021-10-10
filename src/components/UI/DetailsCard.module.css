@@ -2,7 +2,7 @@
   background: var(--main);
   width: 100%;
   height: 85vh;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 .bgImg {
   background: var(--bgImg);

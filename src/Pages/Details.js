@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useRouteMatch, Route } from "react-router-dom";
+import Comments from "../components/comments/Comments";
 import DetailsCard from "../components/UI/DetailsCard";
 import Loader from "../components/UI/Loader";
 
@@ -8,6 +9,7 @@ const Details = () => {
   const [idDetails, setidDetails] = useState();
   
   const params = useParams();
+  const match = useRouteMatch();
 
   const { movieId } = params;
 
@@ -45,8 +47,6 @@ const Details = () => {
         }
       });
   }, [movieId]);
-  // const release_date = idDetails.hasOwnProperty("name") ? idDetails.first_air_date : idDetails.release_date
-  // console.log(idDetails);
   if (isLoading) {
     return <Loader />;
   }
@@ -68,6 +68,16 @@ const Details = () => {
         runtime = {idDetails.hasOwnProperty("name") ? idDetails.episode_run_time[0] : idDetails.runtime}
         votes = {idDetails.vote_average}
       />}
+      <Route path={match.path} exact>
+        <div className='centered'>
+          <Link className='btn' to={`${match.url}/comments`}>
+            Load Comments
+          </Link>
+        </div>
+      </Route>
+      <Route path={`${match.path}/comments`}>
+        <Comments />
+      </Route>
     </Fragment>
   );
 };

@@ -1,0 +1,15 @@
+.comments {
+  text-align: center;
+  background: var(--main);
+  color: var(--white);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.comments h2{
+  margin: 0;
+  margin-bottom: 10px;
+}
+.comments > button {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}

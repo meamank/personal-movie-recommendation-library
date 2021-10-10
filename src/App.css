@@ -40,6 +40,55 @@ body {
   margin: auto;
   margin-bottom: 15px;
 }
+.centered {
+  margin:auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main);
+}
+
+.focused {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 8px;
+  border: 1px solid var(--cyan);
+  cursor: pointer;
+  margin: 6px;
+  background: var(--main);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--main);
+}
+
+.btn--flat {
+  cursor: pointer;
+  font: inherit;
+  color: teal;
+  border: none;
+  background-color: none;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+.btn--flat:hover,
+.btn--flat:active {
+  background-color: teal;
+  color: white;
+}
 @media only screen and (max-width: 768px) {
   .filter-container {
     flex-flow: row wrap;
