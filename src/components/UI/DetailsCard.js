@@ -88,7 +88,7 @@ const DetailsCard = (props) => {
                           <p className={classes.overview}>{props.plot}</p>
                         </div>
                       </div>
-                      {watchProviders.IN ? <div className={classes.description}>
+                      {watchProviders.IN.flatrate ? <div className={classes.description}>
                         <h3 className={classes.desc}>Streaming On</h3>
                         <div>
                           <img
