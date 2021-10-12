@@ -299,4 +299,10 @@ h3 {
     padding: 20px;
     background: var(--main);
   }
+  .comments {
+    display: flex;
+    /* background: var(--main); */
+    background: var(--main);
+    width: 100%;
+  }
 }

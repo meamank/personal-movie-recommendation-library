@@ -1,11 +1,4 @@
-.loading {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #fff;
-}
+
 .loader {
   left: 50%;
   margin-left: -4em;

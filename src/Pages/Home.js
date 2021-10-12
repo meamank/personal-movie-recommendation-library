@@ -42,7 +42,7 @@ const Home = () => {
   }, []);
 
   if (isLoading) {
-    return <Loader />;
+    return <div className= "loading"><Loader /></div>;
   }
   // console.log(filterYear)
 
