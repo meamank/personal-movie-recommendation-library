@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import classes from "./DetailsCard.module.css";
 import { Fragment, useEffect, useState } from "react";
+import Pie from "./Pie";
 const DetailsCard = (props) => {
   const [watchProviders, setWatchProviders] = useState();
 
@@ -64,19 +65,7 @@ const DetailsCard = (props) => {
                         </div>
                       </div>
                       <div className={classes.rating}>
-                        <div className={classes["imdb-rating"]}>
-                          <ul>
-                            <li>
-                              <p>User Score</p>
-                            </li>
-
-                            <li>
-                              <span className={classes["imdb-value"]}>
-                                {`${props.votes * 10}%`}
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
+                        <Pie percentage={props.votes * 10} colour={"#21d07a"} />
                       </div>
                       <div className={classes.description}>
                         <h3 className={classes.tagline}>{props.tagline}</h3>
@@ -85,7 +74,7 @@ const DetailsCard = (props) => {
                           <p className={classes.overview}>{props.plot}</p>
                         </div>
                       </div>
-                      {watchProviders.IN.flatrate ? (
+                      {watchProviders.IN && watchProviders.IN.flatrate ? (
                         <div className={classes.description}>
                           <h3 className={classes.desc}>Streaming On</h3>
                           <div>
@@ -98,7 +87,6 @@ const DetailsCard = (props) => {
                         </div>
                       ) : null}
                     </section>
-                    
                   </div>
                 </section>
               </div>

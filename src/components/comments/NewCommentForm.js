@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, Fragment } from "react";
+import { useRef, useEffect, Fragment } from "react";
 import useHttp from "../hooks/use-http";
 import { addComment } from "../libs/api";
 import Loader from "../UI/Loader";
