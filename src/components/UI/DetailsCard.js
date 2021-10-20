@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import classes from "./DetailsCard.module.css";
 import { Fragment, useEffect, useState } from "react";
-
+import Pie from "./Pie";
 const DetailsCard = (props) => {
   const [watchProviders, setWatchProviders] = useState();
-  console.log(props.type);
 
   useEffect(() => {
     if (props.type === "tv") {
@@ -27,8 +26,7 @@ const DetailsCard = (props) => {
     "--bgImg": background,
   };
   console.log(watchProviders);
-  
-  
+
   const genres = props.genres;
   return (
     <Fragment>
@@ -67,19 +65,7 @@ const DetailsCard = (props) => {
                         </div>
                       </div>
                       <div className={classes.rating}>
-                        <div className={classes["imdb-rating"]}>
-                          <ul>
-                            <li>
-                              <p>User Score</p>
-                            </li>
-
-                            <li>
-                              <span className={classes["imdb-value"]}>
-                                {`${props.votes * 10}%`}
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
+                        <Pie percentage={props.votes * 10} colour={"#21d07a"} />
                       </div>
                       <div className={classes.description}>
                         <h3 className={classes.tagline}>{props.tagline}</h3>
@@ -88,16 +74,18 @@ const DetailsCard = (props) => {
                           <p className={classes.overview}>{props.plot}</p>
                         </div>
                       </div>
-                      {watchProviders.IN ? <div className={classes.description}>
-                        <h3 className={classes.desc}>Streaming On</h3>
-                        <div>
-                          <img
-                            src={`https://image.tmdb.org/t/p/w92/${watchProviders.IN.flatrate[0].logo_path}`}
-                            alt="cover"
-                            className={classes.streamLogo}
-                          />
+                      {watchProviders.IN && watchProviders.IN.flatrate ? (
+                        <div className={classes.description}>
+                          <h3 className={classes.desc}>Streaming On</h3>
+                          <div>
+                            <img
+                              src={`https://image.tmdb.org/t/p/w92/${watchProviders.IN.flatrate[0].logo_path}`}
+                              alt="cover"
+                              className={classes.streamLogo}
+                            />
+                          </div>
                         </div>
-                      </div> : null}
+                      ) : null}
                     </section>
                   </div>
                 </section>

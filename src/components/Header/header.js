@@ -5,7 +5,7 @@ const Header = (props) => {
 
   return (
     <nav className="navbar">
-      <a className="navbar-brand" href="/welcome">
+      <a className="navbar-brand" href="/">
         <img
           src={logo}
           width="30"
